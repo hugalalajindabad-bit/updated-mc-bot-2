@@ -1,4 +1,4 @@
-//A1
+//U1
 const axios = require("axios");
 
 const webhookURL = process.env.DISCORD_WEBHOOK_URL;
@@ -82,7 +82,7 @@ async function updateServerStatus(data) {
   const lastUpdated = Math.floor(Date.now() / 1000);
 
   // other server'# ping
-  let othersPing = await getPeerPings("Node-A1");
+  let othersPing = await getPeerPings("Node-U1");
   
   // Embed
   const embed = {
@@ -103,8 +103,8 @@ async function updateServerStatus(data) {
       },
       {
         name: "• `🏓` Ping",
-        value: `↳ [<:server:1570687895440724039>] - Node-A1 : \`${online ? `${ping}` : "-1"} ms\` [Asia]
-↳ [<:server:1570687895440724039>] - Node-U1 : \`${othersPing["Node-U1"]} ms\` [US-East] \n\u200B`,
+        value: `↳ [<:server:1570687895440724039>] - Node-A1 : \`${othersPing["Node-A1"]} ms\` [Asia]
+↳ [<:server:1570687895440724039>] - Node-U1 : \`${online ? `${ping}` : "-1"} ms\` [US-East] \n\u200B`,
         inline: true
       },
       {
