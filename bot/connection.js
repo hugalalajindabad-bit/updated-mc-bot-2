@@ -17,7 +17,7 @@ function createBotManager() {
     const options = {
       host: process.env.MC_HOST || 'mazdoor-union-0-8f1edd.play.shulkerboxes.com',
       port: Number(process.env.MC_PORT) || 25565,
-      username: process.env.MC_USERNAME || 'bowt_1',
+      username: process.env.MC_USERNAME || 'bowt_0',
       auth: process.env.MC_AUTH || 'offline'
     };
     if (process.env.MC_VERSION) options.version = process.env.MC_VERSION;
