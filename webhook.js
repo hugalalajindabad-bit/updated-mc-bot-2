@@ -46,6 +46,7 @@ async function getPeerPings(excludeNode) {
 
 
 async function updateServerStatus(data) {
+  return true;
   const {
     online = false,
     playerCount = 0,
