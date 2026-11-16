@@ -1,1 +1,10 @@
-module.exports = { name: 'ping', description: 'Replies with pong', allowList: true, execute(bot) { bot.chat('Pong!'); } };
+module.exports = {
+    name: 'ping',
+    description: 'Shows bot latency',
+    allowList: false,
+
+    execute(bot) {
+        const ping = bot.player.ping;
+        bot.chat(` Pong! My ping is ${ping} ms`);
+    }
+};
