@@ -1,7 +1,7 @@
 module.exports = {
     name: 'sit',
     description: 'Makes the bot sit or stand',
-    allowList: false,
+    allowList: true,
 
     execute(bot, player, args) {
         const action = (args[0] || 'true').toLowerCase();
