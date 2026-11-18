@@ -1,5 +1,6 @@
 const fs = require('fs');
 const path = require('path');
+let prefix = "?";
 
 // Edit this one list to manage all commands with allowList: true.
 const ALLOWED_PLAYERS = ['SUJOY8534'];
@@ -12,10 +13,10 @@ for (const file of fs.readdirSync(commandDir).filter(name => name.endsWith('.js'
 }
 function handleIngameCommand(bot, username, message) {
   if (typeof message === 'string' && message.trim().startsWith("prefix")) {
-    return bot.chat("My prefix is '?'");
+    return bot.chat(`My prefix is '${prefix}'`);
   };
   
-  if (typeof message !== 'string' || !message.startsWith('?')) return;
+  if (typeof message !== 'string' || !message.startsWith(prefix)) return;
   const parts = message.slice(1).trim().split(/\s+/);
   const name = (parts.shift() || '').toLowerCase();
   if (!name) return;
